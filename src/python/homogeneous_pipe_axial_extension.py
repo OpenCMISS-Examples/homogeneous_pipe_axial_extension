@@ -6,7 +6,8 @@ import sys, os, exfile
 
 #DOC-START load exfile
 #Load the mesh information in the form of exregion format
-exregion = exfile.Exregion("hetrogenouscylinder.exregion")
+path=os.path.dirname(os.path.abspath(__file__))
+exregion = exfile.Exregion(os.path.join(path,"hetrogenouscylinder.exregion"))
 #DOC-END load exfile
 
 #Additional information regading the mesh should be provided, the rudimentary exfile object does not provide these details
