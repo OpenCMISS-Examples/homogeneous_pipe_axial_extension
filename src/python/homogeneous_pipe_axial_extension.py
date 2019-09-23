@@ -302,7 +302,7 @@ equationsSet.DependentCreateFinish()
 cellML = iron.CellML()
 cellML.CreateStart(cellMLUserNumber, region)
 # Import a Mooney-Rivlin material law from a file
-mooneyRivlinModel = cellML.ModelImport(os.path.join(path,mooney_rivlin.xml"))
+mooneyRivlinModel = cellML.ModelImport(os.path.join(path,"mooney_rivlin.xml"))
 #DOC-END create cellml environment
 
 #DOC-START flag variables
