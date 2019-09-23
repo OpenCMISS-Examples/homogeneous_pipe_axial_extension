@@ -4,6 +4,9 @@
 import sys, os, exfile
 #DOC-END imports
 
+
+path=os.path.dirname(os.path.abspath(__file__))
+
 #DOC-START load exfile
 #Load the mesh information in the form of exregion format
 path=os.path.dirname(os.path.abspath(__file__))
@@ -299,7 +302,7 @@ equationsSet.DependentCreateFinish()
 cellML = iron.CellML()
 cellML.CreateStart(cellMLUserNumber, region)
 # Import a Mooney-Rivlin material law from a file
-mooneyRivlinModel = cellML.ModelImport("mooney_rivlin.xml")
+mooneyRivlinModel = cellML.ModelImport(os.path.join(path,mooney_rivlin.xml"))
 #DOC-END create cellml environment
 
 #DOC-START flag variables
